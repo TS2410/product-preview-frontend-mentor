@@ -10,27 +10,98 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @media (max-width: 600px) {
+   #main {
+      flex-direction: column;
+   }
+  }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(30, 38%, 92%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
+    }
+    #main{
+      border-radius: 10px;
+      background-color: white;
+      max-width: 600px;
+      width: 90%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+    img{
+      width: 300px;
+      object-fit: cover;
+    }
+    #section{
+      padding: 40px;
+    }
+    h3{
+      color: hsl(228, 12%, 48%);
+      padding: 0;
+    }
+    p{
+      color: hsl(228, 12%, 48%);
+      font-size: 14px;
+    }
+    button{
+      color: white;
+      background-color: hsl(158, 36%, 37%);
+      height: 50px;
+      width: 95%;
+      border-radius: 8px;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    button:active{
+      background-color: hsl(158, 42%, 18%);
+    }
+    .price{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+    .cart{
+      width: 15px;
+      margin-right: 4px;
+    }
   </style>
 </head>
 <body>
+<div id="main">
+  <img src="./images/image-product-desktop.jpg">
+  <div id="section">
+  <h3>P E R F U M E</h3>
 
-  Perfume
+ <h1>Gabrielle Essence Eau De Parfum</h1> 
 
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
+  <p>
+    A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+    Perfumer-Creator for the House of CHANEL.
+  </p>
+  <div class="price">
+  <span style="font-size: 2.5em; color: hsl(158, 36%, 37%); margin-right: 5px;">$149.99</span>
+  <span style="font-size: 0.99em; color: hsl(228, 12%, 48%); text-decoration: line-through;">$169.99</span>
+  </div>
+  <button><img class="cart" src="./images/icon-cart.svg">Add to Cart</button>
+ </div>
+</div>
+ <div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.linkedin.com/in/tushar-sharma-b551ba345/">Tushar</a>.
   </div>
+</div>
 </body>
 </html>
